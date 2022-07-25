@@ -1,0 +1,78 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-text{
+    margin: 24px;
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 48px;
+    letter-spacing: 1px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    margin-top: -200px;
+    padding: 15px;
+    background-color: beige;
+}
+
+#display-container{
+    height: 50px;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 15px;  
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#display{
+    margin-top: 12px;
+    margin-right: 15px;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+#buttons-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.top-container{
+    display: grid;
+    grid-template-columns: repeat(2, 103px);
+    height: 50px;
+    gap: 3px;
+}
+
+.bottom-container{
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(4, 50px);
+    gap: 3px;
+}
+
+.button{
+    border: none;
+    border-radius: 10px;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 12px;
+    justify-self: flex-end;
+}
+
