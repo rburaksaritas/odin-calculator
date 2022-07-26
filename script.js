@@ -36,3 +36,14 @@ let deleteLastElement = function(e){
 
 const deleteButton = document.getElementById("delete-button");
 deleteButton.addEventListener("click", deleteLastElement);
+
+let clear = function(e){
+    const display = document.getElementById("display");
+    display.textContent = "0";
+    /** TODO: delete stored numbers in memory 
+     * after functionality is implemented
+    */
+}
+
+const clearButton = document.getElementById("clear-button");
+clearButton.addEventListener("click", clear);
