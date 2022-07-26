@@ -6,15 +6,16 @@ let changeDisplay = function(e){
     const pressedNumber = this.textContent;
     const display = document.getElementById("display");
     const displayValue = display.textContent;
+    const history = document.getElementById("history");
     if (displayValue=="0"||displayValue=="+"||displayValue=="-"
-            ||displayValue=="/"||displayValue=="x" || displayValue==""){
-        display.textContent = pressedNumber;       
+            ||displayValue=="/"||displayValue=="x" || displayValue=="" || displayValue=="lmao no way"){
+        display.textContent = pressedNumber;
+        history.textContent = " ";
     } else {
         if(displayValue.length<15){
             display.textContent = displayValue + pressedNumber;
         }
     }
-    const history = document.getElementById("history");
     history.textContent += pressedNumber;
 }
 
