@@ -47,3 +47,21 @@ let clear = function(e){
 
 const clearButton = document.getElementById("clear-button");
 clearButton.addEventListener("click", clear);
+
+let add = function(number1, number2){
+    return number1+number2;
+}
+
+let subtract = function(number1, number2){
+    return number1-number2;
+}
+
+let multiply = function(number1, number2){
+    return number1*number2;
+}
+
+let divide = function(number1, number2){
+    if (number2 == 0){
+        return "lmao no way"
+    } else return number1/number2;
+}
