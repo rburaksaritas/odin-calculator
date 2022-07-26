@@ -14,6 +14,8 @@ let changeDisplay = function(e){
             display.textContent = displayValue + pressedNumber;
         }
     }
+    const history = document.getElementById("history");
+    history.textContent += pressedNumber;
 }
 
 const numberButtons = document.querySelectorAll(".number-button");
@@ -23,7 +25,9 @@ let displayDecimalPoint = function(e){
     const display = document.getElementById("display");
     const displayValue = display.textContent;
     if(!displayValue.includes(".")){
-        display.textContent = displayValue + ".";    
+        display.textContent = displayValue + ".";
+        const history = document.getElementById("history");  
+        history.textContent += ".";
     }
 }
 
@@ -33,9 +37,16 @@ pointButton.addEventListener("click", displayDecimalPoint);
 let deleteLastElement = function(e){
     const display = document.getElementById("display");
     const displayValue = display.textContent;
-    if (displayValue.length == 1) {
+    const history = document.getElementById("history");  
+    if (displayValue.length == 1 && !isNaN(parseFloat(displayValue))) {
         display.textContent = "0";
-    } else display.textContent = displayValue.slice(0, -1);
+        history.textContent = " ";
+    } else {
+        if (!isNaN(parseFloat(displayValue))){
+            display.textContent = displayValue.slice(0, -1);
+            history.textContent = history.textContent.slice(0,-1);
+        }
+    }
 }
 
 const deleteButton = document.getElementById("delete-button");
@@ -46,6 +57,8 @@ let clear = function(e){
     display.textContent = "0";
     previousNumber = 0;
     currentNumber = 0;
+    const history = document.getElementById("history");  
+    history.textContent = " ";
 }
 
 const clearButton = document.getElementById("clear-button");
@@ -65,7 +78,11 @@ let multiply = function(number1, number2){
 
 let divide = function(number1, number2){
     if (number2 == 0){
+        previousNumber = 0,
+        currentNumber = 0;
+        
         return "lmao no way";
+
     } else return number1/number2;
 }
 
@@ -83,6 +100,8 @@ let pressOperation = function(e){
         previousNumber = parseFloat(display.textContent);
         display.textContent = this.textContent;
         operationPressed = this.textContent;
+        const history = document.getElementById("history");  
+        history.textContent += " " + operationPressed + " ";
     } 
     /* operation button pressed later */
     else{
@@ -94,6 +113,8 @@ let pressOperation = function(e){
         currentNumber = 0;
         display.textContent = this.textContent;
         operationPressed = this.textContent;
+        const history = document.getElementById("history");  
+        history.textContent = previousNumber + " " + operationPressed + " ";
     }
 }
 
@@ -113,6 +134,8 @@ let pressEqual = function(e){
     } 
     display.textContent = currentNumber;
     operationPressed = "";
+    const history = document.getElementById("history");  
+    history.textContent = display.textContent;
 }
 
 const equalsButton = document.getElementById("button-equals");
