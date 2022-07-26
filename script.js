@@ -10,7 +10,9 @@ let changeDisplay = function(e){
     if (displayValue=="0"||displayValue=="+"||displayValue=="-"
             ||displayValue=="/"||displayValue=="x" || displayValue=="" || displayValue=="lmao no way"){
         display.textContent = pressedNumber;
-        history.textContent = " ";
+        if (displayValue == "lmao no way"){
+            history.textContent = " ";
+        }
     } else {
         if(displayValue.length<15){
             display.textContent = displayValue + pressedNumber;
