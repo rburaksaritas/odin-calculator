@@ -25,3 +25,14 @@ let displayDecimalPoint = function(e){
 
 const pointButton = document.getElementById("button-point");
 pointButton.addEventListener("click", displayDecimalPoint);
+
+let deleteLastElement = function(e){
+    const display = document.getElementById("display");
+    const displayValue = display.textContent;
+    if (displayValue.length == 1) {
+        display.textContent = "0";
+    } else display.textContent = displayValue.slice(0, -1);
+}
+
+const deleteButton = document.getElementById("delete-button");
+deleteButton.addEventListener("click", deleteLastElement);
