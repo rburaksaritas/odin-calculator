@@ -62,6 +62,7 @@ let multiply = function(number1, number2){
 
 let divide = function(number1, number2){
     if (number2 == 0){
-        return "lmao no way"
+        return "lmao no way";
     } else return number1/number2;
 }
+
