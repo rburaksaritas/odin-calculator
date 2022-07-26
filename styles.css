@@ -121,6 +121,7 @@ body{
 
 footer{
     background: radial-gradient( circle farthest-corner at 10% 20%,  rgb(11, 189, 103) 0%, rgba(37,194,167,1) 87.7% );
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: fixed;
