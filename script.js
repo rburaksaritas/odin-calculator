@@ -66,3 +66,9 @@ let divide = function(number1, number2){
     } else return number1/number2;
 }
 
+let operate = function(operator, number1, number2){
+    if (operator == "+") {return add(number1,number2);}
+    if (operator == "-") {return subtract(number1,number2);}
+    if (operator == "x") {return multiply(number1,number2);}
+    if (operator == "/") {return divide(number1,number2);}
+}
