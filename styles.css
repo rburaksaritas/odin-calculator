@@ -109,13 +109,16 @@ body{
     background-color: rgba(209, 161, 255, 0.2);
 }
 
-.operation-button{
+.operation-button,
+.equals-button{
     background-color: rgba(174, 239, 125, 0.9);
 }
-.operation-button:hover{
+.operation-button:hover,
+.equals-button:hover{
     background-color: rgba(174, 239, 125, 0.5);
 }
-.operation-button:active{
+.operation-button:active,
+.equals-button:active{
     background-color: rgba(174, 239, 125, 0.2);
 }
 
