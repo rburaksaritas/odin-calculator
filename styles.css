@@ -110,13 +110,13 @@ body{
 }
 
 .operation-button{
-    background-color: rgba(142, 252, 181, 0.9);
+    background-color: rgba(174, 239, 125, 0.9);
 }
 .operation-button:hover{
-    background-color: rgba(142, 252, 181, 0.5);
+    background-color: rgba(174, 239, 125, 0.5);
 }
 .operation-button:active{
-    background-color: rgba(142, 252, 181, 0.2);
+    background-color: rgba(174, 239, 125, 0.2);
 }
 
 footer{
