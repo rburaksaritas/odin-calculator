@@ -9,8 +9,6 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    height: 100%;
     background-color: #8efcb5;
     background-image: linear-gradient(45deg, #8efcb5 0%, #fddcff 51%, #d1a1ff 100%);
 }
